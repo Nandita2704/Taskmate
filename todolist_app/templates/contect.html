@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+
+<title> This is my Contect us page </title>
+
+{% endblock title %}
+
+{% block content %}
+    <div class = "container mt-3 mb-3">
+          <img src="{% static 'images/down-6.jpg' %}" class="d-block w-100 max-0" height="250" width="40">
+          <br><center><h3>Contect Us</h3></center>   
+          <form method="POST">
+            {% csrf_token %}
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="First name" name="first_name" aria-label="First name">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Last name" name="last_name" aria-label="Last name">
+                    </div>
+                </div><br>
+                 <div class="row g-3">
+                    <div class="col-md-6">
+                        <input type="email" class="form-control" placeholder="Email" name="email" aria-label="Email">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Contect Number" name="phone" aria-label="Contect Number">
+                    </div>
+                </div><br>
+                <div class="form-group">
+                        <label for="exampleFormControlTextarea3">Inquiry :</label>
+                        <textarea class="form-control" name="enquiry" id="exampleFormControlTextarea3" rows="7"></textarea>
+                </div><br>
+                <div class="row g-3 mb-5">
+                    <div class="col-md-12">
+                
+                          <center> <button class="btn btn-primary mb-9" type="submit">Send Message</button></center>       
+                     </div>
+                </div>     
+
+         </form>
+    </div>
+{% endblock content %}

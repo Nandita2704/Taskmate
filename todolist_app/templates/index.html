@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+
+<title> This is my Index page </title>
+
+{% endblock title %}
+
+{% block content %}
+      <div class = "container">
+            <div class="row mt-5">
+              <div class="col-lg-4">
+
+                <img src="{% static 'images/stickynotes.jpg' %}" class="rounded-lg shadow" alt="Notes" height="250" width="360">
+
+              </div>
+
+
+              <div class="col-lg-4">
+
+                <img src="{% static 'images/stickynotes-1.jpg' %}" class="rounded-lg shadow" alt="Notes" height="250" width="360">
+
+              
+              </div>
+
+
+              <div class="col-lg-4">
+
+               <img src="{% static 'images/stickynotes-2.jpg' %} "class="rounded-lg shadow" alt="Notes" height="250" width="360">
+              
+              </div>
+<div class="row mt-5">          
+<figure class="text-center">
+  <blockquote class="blockquote text-center">
+    <p class="h5 text-primary">Quick And Easy to Use, Anytime, Anywhere</p>
+    <p class="h3">"Plan Your Day Better, Get Your Life Organized"</p>
+    <p class="h1">TaskMate Let's You Keep Track Of Your Task in One Place</p>
+    <a href="{% url 'todolist'  %}"><button type="button" class="btn btn-primary btn-lg mt-3 shadow">Let's Get Started</button></a>
+  </blockquote>
+</figure>
+</div>     
+            </div>  
+      </div>
+      {% endblock content %}
